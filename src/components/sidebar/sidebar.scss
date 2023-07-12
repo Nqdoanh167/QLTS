@@ -1,0 +1,38 @@
+/** @format */
+
+.sidebarWrap {
+   width: 280px;
+   height: 100%;
+   background: #4c5bd4;
+   color: #ffffff;
+   position: fixed;
+   .logo {
+      text-align: center;
+      padding: 20px 0;
+      .logoImg {
+         height: 100%;
+      }
+   }
+   hr {
+      background-color: #fff;
+   }
+   .list {
+      .item {
+         color: #ffffff;
+         font-size: 16px;
+         font-family: Roboto-bold, sans-serif;
+         line-height: 18.75px;
+         display: flex;
+         align-items: center;
+         cursor: pointer;
+         padding: 0 15px;
+         height: 50px;
+         .icon {
+            margin-right: 15px;
+         }
+         .text {
+            font-weight: 600;
+         }
+      }
+   }
+}
