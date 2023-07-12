@@ -11,7 +11,7 @@ body {
    max-width: 100vw;
    overflow-x: hidden;
 }
-.container {
+.containers {
    display: flex;
    justify-content: space-between;
    width: 100%;
@@ -22,4 +22,7 @@ body {
    padding: 20px;
    overflow: hidden;
    width: 100%;
+   @media (max-width: 739px) {
+      margin-left: 0;
+   }
 }

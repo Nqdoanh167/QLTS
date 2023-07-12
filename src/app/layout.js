@@ -1,5 +1,6 @@
 /** @format */
-
+'use client';
+import React, {useState} from 'react';
 import Sidebar from '@/components/sidebar/Sidebar';
 import './globals.css';
 import {Roboto, Inter} from 'next/font/google';
@@ -13,12 +14,13 @@ export const metadata = {
 };
 
 export default function RootLayout({children}) {
+   const [openSidebar, setOpenSidebar] = useState(false);
    return (
       <html lang='en'>
-         <body className='container'>
-            <Sidebar />
+         <body className='containers'>
+            <Sidebar openSidebar={openSidebar} />
             <div className='contentWrap'>
-               <Header />
+               <Header setOpenSidebar={setOpenSidebar} openSidebar={openSidebar} />
                {children}
             </div>
          </body>

@@ -13,7 +13,252 @@
       align-items: center;
       .header-list {
          display: flex;
-         justify-content: space-between;
+         justify-content: right;
+         .item-mes {
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+            margin-right: 40px;
+            position: relative;
+            .sl {
+               font-size: 12px;
+               position: absolute;
+               width: 19px;
+               height: 19px;
+               right: -12px;
+               top: -6px;
+               border-radius: 50%;
+               background-color: #ff4942;
+               color: #fff;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+         }
+         .item-warn {
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+            margin-right: 40px;
+            position: relative;
+         }
+         .item-notify {
+            width: 26px;
+            height: 26px;
+            margin-right: 40px;
+            position: relative;
+            top: -1px;
+            cursor: pointer;
+         }
+         .item-profile {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .imgmember {
+               width: 36px;
+               height: 32px;
+               cursor: pointer;
+               margin-right: 5px;
+               img {
+                  width: 36px;
+                  height: 36px;
+                  border-radius: 50%;
+               }
+            }
+            .name {
+               color: #474747;
+               font-size: 16px;
+               font-weight: 400;
+               line-height: 28px;
+               margin-right: 10px;
+               width: 100px;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               -webkit-line-clamp: 1;
+               display: -webkit-box;
+               -webkit-box-orient: vertical;
+            }
+            .muiten {
+               display: flex;
+               align-items: center;
+               width: 10px;
+               img {
+                  width: 100%;
+                  height: 100%;
+               }
+            }
+         }
+      }
+      @media (max-width: 739px) {
+         display: none;
+      }
+   }
+   .header_menu {
+      position: fixed;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 45px;
+      background: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+      border-radius: unset;
+      background: #4c5bd4;
+      justify-content: flex-end;
+      .btn_sidebar {
+         position: absolute;
+         left: 15px;
+         border: none;
+         outline: none;
+         background-color: unset;
+         cursor: pointer;
+         width: 22px;
+         height: 24px;
+      }
+      .right_menu {
+         display: flex;
+         justify-content: right;
+         .item-mes {
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+            margin-right: 40px;
+            position: relative;
+            .sl {
+               font-size: 12px;
+               position: absolute;
+               width: 19px;
+               height: 19px;
+               right: -12px;
+               top: -6px;
+               border-radius: 50%;
+               background-color: #ff4942;
+               color: #fff;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+         }
+         .item-warn {
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+            margin-right: 40px;
+            position: relative;
+         }
+         .item-notify {
+            width: 26px;
+            height: 26px;
+            margin-right: 40px;
+            position: relative;
+            top: -1px;
+            cursor: pointer;
+         }
+         .item-profile {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .imgmember {
+               width: 36px;
+               height: 36px;
+               cursor: pointer;
+               margin-right: 5px;
+               img {
+                  width: 36px;
+                  height: 36px;
+                  border-radius: 50%;
+               }
+            }
+         }
+      }
+   }
+   @media (max-width: 739px) {
+      .header {
+         display: none;
+      }
+      .header_menu {
+         display: flex;
+      }
+   }
+}
+
+.profile-details {
+   width: 200px;
+   height: 200px;
+   overflow: hidden;
+   position: absolute;
+   border: 1px solid #cccccc;
+   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+   border-radius: 10px;
+   top: 65px;
+   right: 0px;
+   background-color: #fff;
+   z-index: 102;
+   .item {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      cursor: pointer;
+      img {
+         width: 16px;
+         height: 16px;
+      }
+      .text {
+         margin-left: 10px;
+      }
+   }
+}
+
+.khoi_warn {
+   position: absolute;
+   top: 50px;
+   right: 0;
+   width: 340px;
+   background-color: #fff;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+   border-radius: 10px;
+   height: 430px;
+   overflow: hidden;
+   z-index: 304;
+
+   .top_warn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      height: 50px;
+      .close_warn {
+         cursor: pointer;
+         img {
+            width: 17px;
+         }
+      }
+   }
+   .mid_warn {
+      width: 100%;
+      height: 344px;
+      overflow-y: scroll;
+   }
+   .bot_warn {
+      height: 36px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #ffffff;
+      box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.16);
+      p {
+         cursor: pointer;
+         color: #4c5bd4;
+         font-size: 14px;
       }
    }
 }
